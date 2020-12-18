@@ -1,0 +1,57 @@
+server:
+  port: ${GATEAY_PORT:8888}
+
+spring:
+  application:
+    name: gateway
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+eureka:
+  instance:
+    hostname: ${DOMAIN_NAME:localhost}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761}/eureka/
+
+zuul:
+  host:
+    connect-timeout-millis: 50000
+    socket-timeout-millis: 50000
+#  routes:
+#    demo-service:
+#      path: /demo/**
+#      serviceId: dn-demo-service
+#      stripPrefix: true
+#    user-service:
+#      path: /user-service/**
+#      serviceId: DN-USER-SERVICE
+#      stripPrefix: true
+#    test-user-service:
+#      path: /test-user-service/**
+#      serviceId: USER-SERVICE
+#      stripPrefix: true
+#    admin-server:
+#      path: /admin-server/**
+#      serviceId: ADMIN-SERVICE
+#      stripPrefix: true
+#    resource:
+#      path: /resource/**
+#      serviceId: RESOURCE-SERVICE
+#      stripPrefix: true
+#    gallery:
+#      path: /gallery/**
+#      serviceId: GALLERY-SERVICE
+#      striptPrefix: true
+#    image:
+#      path: /images/**
+#      serviceId: IMAGE-SERVICE
+#      striptPrefix: true
+
+
