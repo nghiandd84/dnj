@@ -2,6 +2,9 @@ server:
   port: ${CONFIG_PORT:0}
 
 spring:
+  profiles:
+    active: native # When use with spring.cloud.config.server.native
+      
   application:
     name: config
   cloud:    config:      server:        native:          search-locations: D:/Training/dnj/config-data

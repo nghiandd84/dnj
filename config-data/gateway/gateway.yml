@@ -1,0 +1,23 @@
+server:
+  #  port: 8092
+  servlet:
+    context-path: /adyen-demo
+
+eureka:
+  instance:
+    preferIpAddress: false
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  info:
+    git:
+      mode: full
