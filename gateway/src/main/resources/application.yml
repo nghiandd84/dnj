@@ -24,11 +24,11 @@ zuul:
   host:
     connect-timeout-millis: 50000
     socket-timeout-millis: 50000
-#  routes:
-#    demo-service:
-#      path: /demo/**
-#      serviceId: dn-demo-service
-#      stripPrefix: true
+  routes:
+    dnj-admin:
+      path: /dnj-admin/**
+      serviceId: dnj-admin
+      stripPrefix: true
 #    user-service:
 #      path: /user-service/**
 #      serviceId: DN-USER-SERVICE
