@@ -29,6 +29,10 @@ zuul:
       path: /dnj-admin/**
       serviceId: dnj-admin
       stripPrefix: true
+    config:
+      path: /config/**
+      serviceId: config
+      stripPrefix: true
 #    user-service:
 #      path: /user-service/**
 #      serviceId: DN-USER-SERVICE
