@@ -1,0 +1,68 @@
+#app:
+#  name: DN-USER-SERVICE
+
+jwt:
+  header: Authorization
+  expires_in: 3000 # 50 minutes
+  mobile_expires_in: 6000 # 100 minutes
+  secret: ${JWT_SECRET:Nghia@123}
+server:
+  port: ${PORT:5002}
+
+spring:
+  application:
+    name: DN-USER-SERVICE
+## BEGIN: Auto Generate TABLE
+#  jpa:
+#    generate-ddl: true
+#    hibernate:
+#      # possible values: validate | update | create | create-drop
+#      ddl-auto: create-drop
+## END: Auto Generate TABLE
+  datasource:
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5432/dn_user_service}
+    username: ${POSTGRES_USERNAME:postgres}
+    password: ${POSTGRES_PASSWORD:123456}
+    driver-class-name: org.postgresql.Driver
+#  boot:
+#    admin:
+#      client:
+#        url: ${ADMIN_DOMAIN:http://localhost:5003}
+#        instance:
+#          service-url: ${GATEWAY_DOMAIN_URL:http://localhost:8888}/user-service
+
+eureka:
+  instance:
+    hostname: ${DOMAIN_NAME:localhost}
+    nonSecurePort: ${PORT_NON_SECURE:5002}
+#    status-page-url: ${GATEWAY_DOMAIN_URL:http://localhost:8888}/user-service/actuator/info
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://user:password@localhost:5000}/eureka/
+
+## Config logger
+logging:
+  file:
+    path: logs
+    name: logs/client.log
+
+management:
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+    logfile:
+      external-file: logs/client.log
+    loggers:
+      enabled: true
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  trace:
+    http:
+      enabled: true
