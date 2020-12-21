@@ -34,7 +34,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             "/v2/api-docs",
             "/webjars/**",
             "/actuator/**",
-            "/log"
+            "/log",
+            "/test/**"
     };
 
     @Bean

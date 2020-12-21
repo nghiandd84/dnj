@@ -1,0 +1,11 @@
+spring:
+#  application:
+#    name: user-service
+  cloud:
+    config:
+      name: user-service
+      enabled: true
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: config
