@@ -1,5 +1,5 @@
 server:
-  port: ${CONFIG_PORT:0}
+  port: ${CONFIG_PORT:8801}
 
 spring:
   profiles:
@@ -12,6 +12,7 @@ spring:
 
 eureka:
   client:
+    region: default
     registryFetchIntervalSeconds: 5
     registerWithEureka: true
     fetchRegistry: true

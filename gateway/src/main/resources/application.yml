@@ -33,18 +33,13 @@ zuul:
       path: /config/**
       serviceId: config
       stripPrefix: true
-#    user-service:
-#      path: /user-service/**
-#      serviceId: DN-USER-SERVICE
-#      stripPrefix: true
-#    test-user-service:
-#      path: /test-user-service/**
-#      serviceId: USER-SERVICE
-#      stripPrefix: true
-#    admin-server:
-#      path: /admin-server/**
-#      serviceId: ADMIN-SERVICE
-#      stripPrefix: true
+    user-service:
+      path: /user-service/**
+      serviceId: user-service
+    admin-server:
+      path: /admin-server/**
+      serviceId: dnj-admin
+      stripPrefix: true
 #    resource:
 #      path: /resource/**
 #      serviceId: RESOURCE-SERVICE
