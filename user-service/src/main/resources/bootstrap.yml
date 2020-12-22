@@ -10,12 +10,7 @@ server:
   port: ${PORT:8802}
 
 spring:
-  profiles:    active: local#  cloud:
-#    config:
-#      fail-fast: true
-#      discovery:
-#        enabled: true
-#        service-id: config
+#  profiles:#    active: local
   application:
     name: user-service
 ## BEGIN: Auto Generate TABLE
@@ -47,8 +42,7 @@ eureka:
 # Config logger
 logging:
   file: 
-    path: logs
-    name: client.log
+    name: D:/logs/user-service.log
 
 management:
   endpoint:
