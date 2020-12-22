@@ -1,0 +1,53 @@
+
+
+server:
+  port: ${BOOK_RECOMMENDATION_PORT:0}
+
+spring:
+  application:
+    name: book-recommendation
+  cloud:
+    config:
+      name: book-recommendation
+      discovery:
+        service-id: config # Same application.name of config project
+        enabled: true
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+        
+eureka:
+  instance:
+    hostname: ${DOMAIN_NAME:localhost}
+  client:
+    enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761}/eureka/
+# Config logger
+logging:
+  file: 
+    name: D:/logs/book-recommendation.log
+management:
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+    logfile:
+      external-file: D:/logs/book-recommendation.log
+    loggers:
+      enabled: true
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  trace:
+    http:
+      enabled: true

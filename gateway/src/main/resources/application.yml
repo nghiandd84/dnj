@@ -64,17 +64,9 @@ zuul:
       path: /book-inventory/**
       serviceId: book-inventory
       stripPrefix: true
-#    resource:
-#      path: /resource/**
-#      serviceId: RESOURCE-SERVICE
-#      stripPrefix: true
-#    gallery:
-#      path: /gallery/**
-#      serviceId: GALLERY-SERVICE
-#      striptPrefix: true
-#    image:
-#      path: /images/**
-#      serviceId: IMAGE-SERVICE
-#      striptPrefix: true
+    book-recommendation:
+      path: /book-recommendation/**
+      serviceId: book-recommendation
+      stripPrefix: true
 
 
