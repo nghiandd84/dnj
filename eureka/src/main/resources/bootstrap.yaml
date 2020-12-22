@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      enabled: true
+      uri: 
+        - http://localhost:8801
+#      
+#logging:
+#  file: 
+#    path: logs
+#    name: client.log
+#  level:
+#    root: DEBUG

@@ -1,11 +1,19 @@
 server:
   port: ${EUREKA_PORT:8761}
-
+  
+logging:
+  file: 
+    path: logs
+    name: client.log
+#  level:
+#    root: DEBUG
 
 spring:
   application:
-    name: discover  cloud:    config:      name: discover
-      uri: http://localhost:8801  
+    name: eureka
+  profiles:
+    active: local#  cloud:#    config:
+#      uri: http://localhost:8801  
 eureka:
   instance:
     hostname: localhost
