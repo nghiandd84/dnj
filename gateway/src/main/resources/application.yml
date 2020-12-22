@@ -5,11 +5,27 @@ spring:
   application:
     name: gateway
 
+logging:
+  file: 
+    name: D:/logs/gateway.log
 management:
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+    logfile:
+      external-file: D:/logs/gateway.log
+    loggers:
+      enabled: true
+    shutdown:
+      enabled: true
   endpoints:
     web:
       exposure:
         include: '*'
+  trace:
+    http:
+      enabled: true
 
 eureka:
   instance:
@@ -39,6 +55,10 @@ zuul:
     admin-server:
       path: /admin-server/**
       serviceId: dnj-admin
+      stripPrefix: true
+    book-catalogue:
+      path: /book-catalogue/**
+      serviceId: book-catalogue
       stripPrefix: true
 #    resource:
 #      path: /resource/**

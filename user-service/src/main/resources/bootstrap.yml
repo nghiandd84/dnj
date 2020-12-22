@@ -10,7 +10,6 @@ server:
   port: ${PORT:8802}
 
 spring:
-#  profiles:#    active: local
   application:
     name: user-service
 ## BEGIN: Auto Generate TABLE
@@ -50,7 +49,7 @@ management:
       show-details: always
       show-components: always
     logfile:
-      external-file: logs/client.log
+      external-file: D:/logs/user-service.log
     loggers:
       enabled: true
     shutdown:
