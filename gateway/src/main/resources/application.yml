@@ -60,6 +60,10 @@ zuul:
       path: /book-catalogue/**
       serviceId: book-catalogue
       stripPrefix: true
+    book-inventory:
+      path: /book-inventory/**
+      serviceId: book-inventory
+      stripPrefix: true
 #    resource:
 #      path: /resource/**
 #      serviceId: RESOURCE-SERVICE
