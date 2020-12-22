@@ -16,7 +16,7 @@ public class BooksController {
 
 	@RequestMapping(value = "/stock/{isbn}", method = RequestMethod.GET)
 	public Boolean stock(@PathVariable(name = "isbn") String isbn) {
-		return bookInventoryByIsbn(isbn).map(bi -> bi.getStock() > 0).orElse(false);
+		return bookInventoryByIsbn(isbn).map(bi -> bi.getStock() > 0).orElse(null);
 	}
 
 	private Optional<BookInventory> bookInventoryByIsbn(String isbn) {
