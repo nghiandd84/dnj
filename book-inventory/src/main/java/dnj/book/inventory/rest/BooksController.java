@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import dnj.book.inventory.model.BookInventory;
+import dnj.sdk.book.resp.BookInventory;
+
 
 @RestController
-@RequestMapping(value = "/books", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 public class BooksController {
 
-	@RequestMapping(value = "/stock/{isbn}", method = RequestMethod.GET)
+	@RequestMapping(value = "/books/stock/{isbn}", method = RequestMethod.GET)
 	public Boolean stock(@PathVariable(name = "isbn") String isbn) {
 		return bookInventoryByIsbn(isbn).map(bi -> bi.getStock() > 0).orElse(null);
 	}

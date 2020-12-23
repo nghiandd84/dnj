@@ -1,4 +1,4 @@
-package dnj.book.inventory.model;
+package dnj.sdk.book.resp;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;

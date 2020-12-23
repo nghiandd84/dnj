@@ -77,6 +77,19 @@
 			<artifactId>logback-core</artifactId>
 			<version>1.2.3</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>dnj.common</groupId>
+			<artifactId>common-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>dnj.sdk</groupId>
+			<artifactId>book-sdk</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

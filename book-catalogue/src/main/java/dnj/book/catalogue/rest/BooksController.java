@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import dnj.book.catalogue.model.Book;
+import dnj.sdk.book.resp.Book;
 
 @RestController
-@RequestMapping(value = "/books", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 public class BooksController {
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value = "/books", method = RequestMethod.GET)
 	public List<Book> index() {
 		Book buildingMicroservices = new Book("1491950358", "Building Microservices");
 		Book releaseIt = new Book("1680502395", "Release It!");

@@ -6,9 +6,11 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import dnj.book.recommendation.model.Book;
+import dnj.common.core.constant.ServiceInstance;
 
-@FeignClient("book-catalogue")
+import dnj.sdk.book.resp.Book;
+
+@FeignClient(ServiceInstance.BOOK_CATALOGUE)
 public interface BookCatalogService {
 	@RequestMapping(value = "/books", method = RequestMethod.GET)
 	List<Book> findAll();

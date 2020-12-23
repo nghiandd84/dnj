@@ -16,7 +16,7 @@ import dnj.book.recommendation.service.BookInventoryService;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping(value = "/books", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 @Slf4j
 public class BooksController {
 
@@ -28,7 +28,7 @@ public class BooksController {
 	@Autowired
 	private BookInventoryService bookInventoryService;
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value = "/books", method = RequestMethod.GET)
 	public List<BookRecommendation> getRecommendation() {
 		log.info("getRecommendation");
 		return this.bookCatalogService.findAll().stream().filter(book -> {
