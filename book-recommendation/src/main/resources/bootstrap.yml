@@ -1,7 +1,7 @@
 
 
 server:
-  port: ${BOOK_RECOMMENDATION_PORT:0}
+  port: ${BOOK_RECOMMENDATION_PORT:51003}
 
 spring:
   application:

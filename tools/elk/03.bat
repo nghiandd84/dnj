@@ -1,0 +1,1 @@
+D:\Tools\kibana-7.10.1-windows-x86_64\bin\kibana.bat

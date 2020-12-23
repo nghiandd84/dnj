@@ -1,6 +1,6 @@
 
 server:
-  port: ${BOOK_CATELOGUE_PORT:0}
+  port: ${BOOK_CATELOGUE_PORT:51001}
 
 spring:
   application:
@@ -26,16 +26,16 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:8761}/eureka/
 # Config logger
-logging:
-  file: 
-    name: D:/logs/book-catalogue.log
+#logging:
+#  file: 
+#    name: D:/logs/book-catalogue.log
 management:
   endpoint:
     health:
       show-details: always
       show-components: always
     logfile:
-      external-file: D:/logs/book-catalogue.log
+      external-file: D:/Logs/book-catalogue.log
     loggers:
       enabled: true
     shutdown:

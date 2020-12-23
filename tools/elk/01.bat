@@ -1,0 +1,1 @@
+D:\Tools\elasticsearch-7.10.1\bin\elasticsearch.bat

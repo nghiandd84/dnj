@@ -1,7 +1,7 @@
 
 
 server:
-  port: ${BOOK_INVENTORY_PORT:0}
+  port: ${BOOK_INVENTORY_PORT:51002}
 
 spring:
   application:
@@ -26,17 +26,14 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:8761}/eureka/
-# Config logger
-logging:
-  file: 
-    name: D:/logs/book-inventory.log
+
 management:
   endpoint:
     health:
       show-details: always
       show-components: always
     logfile:
-      external-file: D:/logs/book-inventory.log
+      external-file: D:/Logs/book-inventory.log
     loggers:
       enabled: true
     shutdown:

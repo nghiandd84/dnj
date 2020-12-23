@@ -1,0 +1,1 @@
+D:\Tools\logstash-7.10.1\bin\logstash.bat -f logstash-elk.conf
