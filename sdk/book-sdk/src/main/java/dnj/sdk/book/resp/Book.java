@@ -11,7 +11,7 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class Book {
-	private String id;
+	private Long id;
 	private String name;
 
 }

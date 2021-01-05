@@ -15,5 +15,5 @@ import dnj.common.core.constant.ServiceInstance;
 public interface BookInventoryService {
 	@RequestMapping(method = RequestMethod.GET, value = "/books/stock/{isbn}")
 	@Nullable
-	Boolean haveInInventory(@PathVariable("isbn") String isbn);
+	Boolean haveInInventory(@PathVariable("isbn") Long isbn);
 }
